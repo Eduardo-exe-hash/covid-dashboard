@@ -1,10 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #0c0c0c;
+    background-color: #0b0b0b;
     color: #e5e5e5;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
@@ -18,10 +17,8 @@ body {
     height: 64px;
     padding: 0 40px;
 
-    background: linear-gradient(180deg, #0f0f0f, #151515);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-
-    font-family: 'Inter', system-ui, Arial, sans-serif;
+    background: linear-gradient(180deg, #0f0f0f, #141414);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .nav-link {
@@ -31,35 +28,31 @@ body {
 
     color: #cfcfcf;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
 
     padding: 10px 18px;
-    border-radius: 10px;
-
+    border-radius: 12px;
     transition: all 0.25s ease;
 }
 
 .nav-link:hover {
     color: #ffffff;
-    background: rgba(128, 0, 255, 0.15);
+    background: rgba(138, 43, 226, 0.18);
     transform: translateY(-1px);
-}
-
-.top-space {
-    height: 70px;
 }
 
 .titulo {
     text-align: center;
-    margin-top: 10px;
-    font-size: 32px;
+    margin: 20px 0 10px;
+    font-size: 34px;
     font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .dropdown {
-    width: 300px;
-    margin: 20px auto;
+    width: 320px;
+    margin: 20px auto 30px;
 }
 
 .card-container {
@@ -67,71 +60,100 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 18px;
     padding: 0 30px;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .card {
-    background: #1a1a1a;
-    padding: 18px;
-    border-radius: 10px;
+    background: linear-gradient(180deg, #161616, #1c1c1c);
+    padding: 20px;
+    border-radius: 14px;
     text-align: center;
-    font-size: 17px;
+
+    font-size: 16px;
     font-weight: 600;
-    color: #fff;
-    border: 1px solid #2a2a2a;
-    transition: 0.3s;
+    color: #ffffff;
+
+    border: 1px solid #262626;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    background: #242424;
-    transform: translateY(-3px);
+    background: #222;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65);
 }
 
-.graph-grid {
+.graficos-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    padding: 30px;
+    gap: 30px;
+    padding: 35px 30px 10px;
 }
 
-.graph-box {
-    background: #151515;
+.graficos-container > div {
+    background: #141414;
+    border-radius: 16px;
+    padding: 20px;
     border: 1px solid #222;
-    padding: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.55);
+}
+
+.dash-tabs {
+    margin: 0 auto 20px;
+    width: fit-content;
+}
+
+.tab {
+    background: #151515 !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    color: #aaa !important;
+    font-weight: 600 !important;
+}
+
+.tab--selected {
+    background: #7b2cff !important;
+    color: #fff !important;
     border-radius: 12px;
-    box-shadow: 0px 0px 18px rgba(0,0,0,0.5);
 }
 
 #topBtn {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    background: #2c2cff;
+
+    background: linear-gradient(135deg, #6a00ff, #8a2be2);
     color: white;
+
     padding: 12px 16px;
     border: none;
     border-radius: 45px;
+
     cursor: pointer;
     font-weight: 600;
-    box-shadow: 0 0 12px rgba(50,50,255,0.6);
+    box-shadow: 0 0 16px rgba(130, 50, 255, 0.6);
+
     z-index: 1500;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 #topBtn:hover {
-    background: #4747ff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 22px rgba(130, 50, 255, 0.9);
 }
 
 .footer {
     text-align: center;
     padding: 25px;
-    margin-top: 40px;
-    color: #888;
+    margin-top: 50px;
+    color: #777;
     border-top: 1px solid #222;
 }
 
 @media (max-width: 900px) {
-    .graph-grid {
+    .graficos-container {
         grid-template-columns: 1fr;
     }
 }
@@ -145,5 +167,9 @@ body {
     .nav-link {
         font-size: 14px;
         padding: 8px 14px;
+    }
+
+    .dropdown {
+        width: 90%;
     }
 }
