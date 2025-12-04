@@ -70,6 +70,15 @@ def atualizar_tabs(tab, pais):
         else:
             dff[col] = dff[col].fillna(0)
 
+    for col in ["people_vaccinated", "people_fully_vaccinated"]:
+        dff[col] = (
+            dff[col]
+            .where(dff[col] > 0)
+            .ffill()
+            .fillna(0)
+            .astype("int64")
+            .cummax()
+        )
     total_casos = int(dff["new_cases"].sum())
     total_mortes = int(dff["new_deaths"].sum())
 
