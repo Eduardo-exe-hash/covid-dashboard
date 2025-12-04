@@ -6,6 +6,7 @@ app = Dash(
     use_pages=True,
     suppress_callback_exceptions=True
 )
+server = app.server
 
 app.title = "COVID-19 | Análise Interativa"
 
